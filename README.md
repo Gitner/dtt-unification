@@ -4,6 +4,6 @@ The streaming platform will be born and group all the free to air channels toget
 
 The European Union must make it available for free on a unified platform eventually managed by individual nations, it is an inalienable right to have access to free information and currently streaming is cumbersome and difficult to use, the goal of this project is to use the platform even with a television where the standard signal is not sufficient or in any case does not allow normal viewing of TV channels
 
-Demo on: hlstv.dyndns.tv
-Direct call: hlstv.dyndns.tv/2 (Rai 2)
-Zapping: Arrows up & down
+- Demo on: hlstv.dyndns.tv
+- Direct call: hlstv.dyndns.tv/2 (Rai 2)
+- Zapping: Arrows up & down
