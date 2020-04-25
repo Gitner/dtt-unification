@@ -1,0 +1,36 @@
+-----------------------------------------------------------------------
+//opzione da inserire per modificare la suite di cifratura TLS
+//si applica al server mediapolis.rai.it
+--tls-cipher-list="ECDHE-RSA-AES128-SHA256:"
+-----------------------------------------------------------------------
+//modificato il modo in cui server.js legge il json con la lista canali
+const fs = require('fs'),
+[-]   util = require('util'),
+[-]   readFile = util.promisify(fs.readFile);
+
+app.get('/:ch', async (req, res) => {
+[-]json = JSON.parse(await readFile('rai.json'));
+  res.send(await jukebox.rotta(json[decodeURI(req.params.ch)]));
+});
+//diventa
+const fs = require('fs'),
+[+]   json = JSON.parse(fs.readFileSync('rai.json'));
+
+app.get('/:ch', async (req, res) => {
+  res.send(await jukebox.rotta(json[decodeURI(req.params.ch)]));
+});
+-----------------------------------------------------------------------
+// implementato il sistema di instradamento: /provider/canale
+-----------------------------------------------------------------------
+//  3.4 studio versione priva di player basato su hls.js
+-----------------------------------------------------------------------
+//  4.4 introdotto il template engine pug
+-----------------------------------------------------------------------
+// 10.4 aggiunto il canale Tv8
+-----------------------------------------------------------------------
+// risolto il problema dell'avvio del canale in /provider/canale
+-----------------------------------------------------------------------
+// 17.4 introdotti i canali Discovery
+-----------------------------------------------------------------------
+// 19.4 aggiunti i canali viacom
+-----------------------------------------------------------------------

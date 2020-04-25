@@ -1,0 +1,14 @@
+body{
+  background-color:black;
+}
+
+#video{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
