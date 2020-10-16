@@ -1,10 +1,10 @@
 const request = require('request-promise');
-const urlToken = 'https://dplayproxy.azurewebsites.net/api/config/init';
+const urlToken = 'https://eu2-prod.disco-api.com/token?realm=dplayit';
 
 discovery = async (url) => {
-  //richiede il json contenente l'AccessToken e lo estrae
-  const setJson = await request({uri: urlToken, json: true}); 
-  const bearer = setJson.Data.AccessToken.split('__!__')[0];
+  //richiede il json contenente il Token e lo estrae
+  const setJson = await request({uri: urlToken, json: true});
+  const bearer = setJson.data.attributes.token;
   const options = {url: url, json: true, headers: {'Authorization': 'Bearer ' + bearer}};
   //richiede il json col link al canale
   const json = await request(options);
